@@ -22,17 +22,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="home" href="{{ siteUrl }}" />
 
+  {% includeCssFile "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" %}
+  {% includeCssFile "assets/layout.css" %}
 </head>
 
 <body>
   <a href="#main" class="visually-hidden">Skip to main content</a>
 
-	{# Banner #}
-  {% include 'partials/_banner' %}
+  <header>
+  	{# Banner #}
+    {% include 'partials/_banner' %}
 
-	{# Site Navigation Navbar #}
-  {% include 'partials/_navbar' %}
-
+  	{# Site Navigation Navbar #}
+    {% include 'partials/_navbar' %}
+  </header>
+  
   <main id="main" role="main">
     {% block content %}
       <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
