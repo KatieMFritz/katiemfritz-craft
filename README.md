@@ -4,6 +4,7 @@
 .   Run [Wamp64](http://download.cnet.com/WampServer-64-Bit/3000-10248_4-75544590.html) as administrator.
 .   [Download Craft](https://craftcms.com/) and follow [installation instructions](https://craftcms.com/docs/installing). Put site in a new folder in `wamp64/www`.
 .   Create `.gitignore` and initialize repo.
+.   Add `'devMode' => true,` to `config/general.php`
 
 ## Config
 
@@ -20,3 +21,7 @@
 -   [Contact Form (Pixel and Tonic)](https://github.com/pixelandtonic/ContactForm)
 -   [Field Manager (Engram Design)](https://github.com/engram-design/FieldManager)
 -   [Sprout Fields (Barrel Strength Design)](http://sprout.barrelstrengthdesign.com/craft-plugins/fields)
+
+## Theme Development
+
+Rename `.html` files to `.twig` for better linting.

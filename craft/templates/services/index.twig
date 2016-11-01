@@ -1,0 +1,29 @@
+{#
+ # Services index template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+{% set title = "Services" %}
+
+{% block content %}
+  <h1>Services</h1>
+
+  <nav class="toc">
+    <ul>
+      {% for entry in craft.entries.section('services').find() %}
+        <li><a href="#{{ entry.title|replace(' ', '-')|lower }}">{{ entry.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {% for entry in craft.entries.section('services').find() %}
+    <section>
+      <h2 id="{{ entry.title|replace(' ', '-')|lower }}">{{ entry.title }}</h2>
+      {{ entry.serviceDescription }}
+      <h3>What you get:</h3>
+      {{ entry.deliverables }}
+      <strong>Price: </strong>{{ entry.price }}
+    </section>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,47 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>
+    {% if entry.title is defined %}{{ entry.title }}
+    {% elseif title is defined %}{{ title }}
+    {% else %}{{ siteName }}{% endif %} | {{ siteInfo.siteNickname }}
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="home" href="{{ siteUrl }}" />
+
+</head>
+
+<body>
+  <a href="#main" class="visually-hidden">Skip to main content</a>
+
+	{# Banner #}
+  {% include 'partials/_banner' %}
+
+	{# Site Navigation Navbar #}
+  {% include 'partials/_navbar' %}
+
+  <main id="main" role="main">
+    {% block content %}
+      <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+      <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+    {% endblock %}
+  </main>
+
+	{# Footer #}
+  {% include 'partials/_footer' %}
+
+</body>
+</html>

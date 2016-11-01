@@ -1,0 +1,14 @@
+{% extends "_layout" %}
+
+{% block content %}
+  <article>
+    <h1>{{ entry.title }}</h1>
+    <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+    <blockquote>
+      {{ entry.testimonial }}
+      <footer>
+        - {{ entry.personName }}, {{ entry.personTitle }}, <a href="{{ entry.org.orgUrl }}">{{ entry.org.orgName }}</a> ({{ entry.org.orgLocation }})
+      </footer>
+    </blockquote>
+  </article>
+{% endblock %}

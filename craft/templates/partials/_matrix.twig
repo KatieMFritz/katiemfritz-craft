@@ -1,0 +1,16 @@
+{% for block in entry.contentMatrix %}
+
+    {% if block.type == "text" %}
+      <h2>{{ block.h2 }}</h2>
+      <h3>{{ block.h3 }}</h3>
+      {{ block.text|markdown }}
+
+    {% elseif block.type == "image" %}
+        {% set image = block.image.first() %}
+        {% if image %}
+            <img src="{{ image.getUrl('') }}" width="{{ image.getWidth('') }}" height="{{ image.getHeight('') }}" alt="{{ image.altText }}">
+        {% endif %}
+
+    {% endif %}
+
+{% endfor %}

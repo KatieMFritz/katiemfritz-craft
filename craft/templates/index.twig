@@ -20,14 +20,13 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
 
-	{{ entry.body }}
+  {% include 'partials/_matrix' %}
 
-	<h2>Recent News</h2>
+	<h2>Services</h2>
 	<ul>
-		{% for entry in craft.entries.section('news').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+		{% for entry in craft.entries.section('services').limit(10).find() %}
+			<li><a href="{{ siteUrl }}services#{{ entry.title|replace(' ', '-')|lower }}">{{ entry.title }}</a></li>
 		{% endfor %}
 	</ul>
 {% endblock %}

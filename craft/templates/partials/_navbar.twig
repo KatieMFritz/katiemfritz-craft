@@ -1,0 +1,7 @@
+<nav>
+  <ul>
+    <li><a href="{{ url('home') }}" {% if craft.request.firstSegment == 'home' %}class="active"{% endif %}>Home</a></li>
+    <li><a href="{{ url('services') }}" {% if craft.request.firstSegment == 'services' %}class="active"{% endif %}>Services</a></li>
+    <li><a href="{{ url('portfolio') }}" {% if craft.request.firstSegment == 'portfolio' %}class="active"{% endif %}>Portfolio</a></li>
+  </ul>
+</nav>
