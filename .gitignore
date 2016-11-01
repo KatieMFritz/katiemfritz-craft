@@ -1,0 +1,11 @@
+# Config
+dandelion.yml
+sftp-config.json
+craft/config/db.php
+
+# File Systems
+desktop.ini
+.DS_Store
+
+# Logs
+**/*.log
