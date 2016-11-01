@@ -1,0 +1,171 @@
+[
+    {
+        "name": "Contact Email Address",
+        "handle": "contactEmailAddress",
+        "instructions": "What's the best email address for someone to use if they want to learn more?",
+        "required": false,
+        "translatable": 0,
+        "type": "SproutFields_Email",
+        "settings": {
+            "placeholder": "",
+            "customPatternToggle": "",
+            "customPattern": "",
+            "customPatternErrorMessage": "",
+            "uniqueEmail": ""
+        }
+    },
+    {
+        "name": "Contact Phone Number",
+        "handle": "contactPhoneNumber",
+        "instructions": "What's the best number to call with questions?",
+        "required": false,
+        "translatable": 0,
+        "type": "SproutFields_Phone",
+        "settings": {
+            "placeholder": "",
+            "customPatternToggle": 1,
+            "mask": "###.###.####",
+            "customPatternErrorMessage": "Phone number must match this format: ###.###.####",
+            "inputMask": ""
+        }
+    },
+    {
+        "name": "Facebook Share Image",
+        "handle": "facebookShareImage",
+        "instructions": "This will show up when someone shares a link from your site, and the link doesn't have a featured image associated with it. The image should be 1200x627 pixels for best results.\r\nhttp:\/\/makeawebsitehub.com\/social-media-image-sizes-cheat-sheet\/",
+        "required": false,
+        "translatable": 0,
+        "type": "Assets",
+        "settings": {
+            "useSingleFolder": "",
+            "sources": "*",
+            "defaultUploadLocationSource": 1,
+            "defaultUploadLocationSubpath": "",
+            "singleUploadLocationSource": 1,
+            "singleUploadLocationSubpath": "",
+            "restrictFiles": 1,
+            "allowedKinds": [
+                "image"
+            ],
+            "limit": 1,
+            "viewMode": "large",
+            "selectionLabel": ""
+        }
+    },
+    {
+        "name": "Facebook URL",
+        "handle": "facebookUrl",
+        "instructions": "The full URL for your Facebook page, like https:\/\/www.facebook.com\/katiemfritzllc\/",
+        "required": false,
+        "translatable": 0,
+        "type": "SproutFields_Link",
+        "settings": {
+            "placeholder": "https:\/\/www.facebook.com\/SAFSMSU\/",
+            "customPatternToggle": 1,
+            "customPattern": "^https:\/\/www.facebook.com\/(.*)",
+            "customPatternErrorMessage": "Must be a valid link from Facebook.com"
+        }
+    },
+    {
+        "name": "Headshot",
+        "handle": "headshot",
+        "instructions": "Headshot of this person, with their permission",
+        "required": false,
+        "translatable": 0,
+        "type": "Assets",
+        "settings": {
+            "useSingleFolder": "",
+            "sources": "*",
+            "defaultUploadLocationSource": 1,
+            "defaultUploadLocationSubpath": "",
+            "singleUploadLocationSource": 1,
+            "singleUploadLocationSubpath": "",
+            "restrictFiles": 1,
+            "allowedKinds": [
+                "image"
+            ],
+            "limit": 1,
+            "viewMode": "large",
+            "selectionLabel": "Choose an image"
+        }
+    },
+    {
+        "name": "LinkedIn URL",
+        "handle": "linkedinUrl",
+        "instructions": "Full URL for the LinkedIn page or group associated with this site",
+        "required": false,
+        "translatable": 0,
+        "type": "SproutFields_Link",
+        "settings": {
+            "placeholder": "https:\/\/www.linkedin.com\/groups\/4811933\/profile",
+            "customPatternToggle": 1,
+            "customPattern": "^https:\/\/www.linkedin.com\/(.*)",
+            "customPatternErrorMessage": "Must be a valid link from linkedin.com"
+        }
+    },
+    {
+        "name": "Logo",
+        "handle": "logo",
+        "instructions": "",
+        "required": false,
+        "translatable": 0,
+        "type": "Assets",
+        "settings": {
+            "useSingleFolder": 1,
+            "sources": "*",
+            "defaultUploadLocationSource": 1,
+            "defaultUploadLocationSubpath": "",
+            "singleUploadLocationSource": 1,
+            "singleUploadLocationSubpath": "",
+            "restrictFiles": 1,
+            "allowedKinds": [
+                "image"
+            ],
+            "limit": 1,
+            "viewMode": "large",
+            "selectionLabel": ""
+        }
+    },
+    {
+        "name": "Person's Name",
+        "handle": "personsName",
+        "instructions": "",
+        "required": false,
+        "translatable": 0,
+        "type": "PlainText",
+        "settings": {
+            "placeholder": "",
+            "maxLength": "",
+            "multiline": "",
+            "initialRows": 4
+        }
+    },
+    {
+        "name": "Site Nickname",
+        "handle": "siteNickname",
+        "instructions": "How do you want to refer to this site?",
+        "required": false,
+        "translatable": 0,
+        "type": "PlainText",
+        "settings": {
+            "placeholder": "",
+            "maxLength": 30,
+            "multiline": "",
+            "initialRows": 4
+        }
+    },
+    {
+        "name": "Twitter URL",
+        "handle": "twitterUrl",
+        "instructions": "URL for the Twitter account associated with this site\/program",
+        "required": false,
+        "translatable": 0,
+        "type": "SproutFields_Link",
+        "settings": {
+            "placeholder": "",
+            "customPatternToggle": 1,
+            "customPattern": "^https:\/\/twitter.com(.*)",
+            "customPatternErrorMessage": "Must be a valid link from twitter.com"
+        }
+    }
+]

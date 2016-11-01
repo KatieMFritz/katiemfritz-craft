@@ -1,3 +1,6 @@
+# Craft Base
+craft/app
+
 # Config
 dandelion.yml
 sftp-config.json
