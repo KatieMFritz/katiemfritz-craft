@@ -10,6 +10,16 @@
   text-align: center;
 }
 
+.u-left {
+  float: left;
+  padding: 0 2rem 2rem 0;
+}
+
+.u-right {
+  float: right;
+  padding: 0 0 2rem 2rem;
+}
+
 .u-container {
   max-width: 50rem;
   margin: 0 auto;
@@ -136,6 +146,10 @@ Special Components
   border-bottom: 2px dashed #1997a9;
   padding-bottom: 2em;
   margin-bottom: 2em;
+}
+
+.c-card:last-child {
+  border-bottom: none;
 }
 /***************************
 FOOTER

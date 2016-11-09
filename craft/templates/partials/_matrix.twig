@@ -8,7 +8,7 @@
     {% elseif block.type == "image" %}
         {% set image = block.image.first() %}
         {% if image %}
-            <img src="{{ image.getUrl('') }}" width="{{ image.getWidth('') }}" height="{{ image.getHeight('') }}" alt="{{ image.altText }}">
+            <img src="{{ image.getUrl('') }}" width="{{ image.getWidth('') }}" height="{{ image.getHeight('') }}" alt="{{ image.altText }}" class="{{ block.align }}">
         {% endif %}
 
     {% endif %}

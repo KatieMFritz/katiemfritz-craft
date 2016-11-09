@@ -4,10 +4,10 @@
 <meta property="og:title" content="
   {% if entry.title is defined %}{{ entry.title }}
   {% elseif title is defined %}{{ title }}
-  {% else %}{{ siteName }}{% endif %} | {{ socialMedia.siteNickname }}">
+  {% else %}{{ siteName }}{% endif %} | {{ siteInfo.siteNickname }}">
 <meta property="og:url" content="
   {% if entry.url is defined %}{{ entry.Url }}
   {% elseif link is defined %}{{ link }}
   {% else %}{{ siteUrl }}{% endif %}">
 <meta property="og:image" content="{{ siteUrl }}img/og-default.png">
-<meta property="og:description" content="{% if entry.summary is defined %}{{ entry.summary }}{% else %}{{ socialMedia.summary }}{% endif %}">
+<meta property="og:description" content="{% if entry.summary is defined %}{{ entry.summary }}{% else %}{{ siteInfo.summary }}{% endif %}">
