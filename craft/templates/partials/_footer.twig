@@ -1,12 +1,15 @@
-<footer id="footer">
-  <h3>Contact Me</h3>
-  <ul>
-    <li><strong>Email (preferred):</strong><a href="mailto:{{ siteInfo.contactEmailAddress }}">{{ siteInfo.contactEmailAddress }}</a></li>
-    <li><strong>Phone (Eastern time zone):</strong> {{ siteInfo.contactPhoneNumber }}</li>
-    <li><a href="{{ siteInfo.githubUrl }}">Github</a></li>
-    <li><a href="{{ siteInfo.linkedinUrl }}">LinkedIn</a></li>
-    <li><a href="{{ siteInfo.facebookUrl }}">Facebook</a></li>
-    <li><a href="{{ siteInfo.twitterUrl }}">Twitter</a></li>
-  </ul>
+<footer class="c-footer">
+  <div class="c-contact u-container">
+    <h3 class="u-center-text">Contact Me</h3>
+    <ul class="c-nav c-nav--center">
+      <li><a href="mailto:{{ siteInfo.contactEmailAddress }}" title="email (preferred)"><span class="icon icon-envelope"></span><span class="u-visually-hidden">Email</span></a></li>
+      <li><a href="{{ siteInfo.githubUrl }}" title="Github"><span class="icon icon-social-github"></span><span class="u-visually-hidden">Github</span></a></li>
+      <li><a href="{{ siteInfo.linkedinUrl }}" title="LinkedIn"><span class="icon icon-social-linkedin"></span><span class="u-visually-hidden">LinkedIn</span></a></li>
+      <li><a href="{{ siteInfo.facebookUrl }}" title="Facebook"><span class="icon icon-social-facebook"></span><span class="u-visually-hidden">Facebook</span></a></li>
+      <li><a href="{{ siteInfo.twitterUrl }}" title="Twitter"><span class="icon icon-social-twitter"></span><span class="u-visually-hidden">Twitter</span></a></li>
+    </ul>
+  </div>
+  <div class="u-container c-copyright u-center-text">
   <p>Copyright &copy {{ now.year }} Katie M Fritz, LLC. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a></p>
+  </div>
 </footer>

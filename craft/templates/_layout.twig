@@ -23,29 +23,41 @@
   <link rel="home" href="{{ siteUrl }}" />
 
   {% includeCssFile "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" %}
-  {% includeCssFile "assets/layout.css" %}
+  {% includeCssFile "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" %}
+  {% includeCssFile "assets/css/layout.css" %}
+  {% if (entry is defined) and (entry.slug == 'homepage') %}{% includeCssFile "assets/css/home.css" %}{% endif %}
+  {% includeCssFile "assets/css/to-top.css" %}
 </head>
 
-<body>
-  <a href="#main" class="visually-hidden">Skip to main content</a>
+{% if entry is defined %}
+  {% set bodyClass = entry.slug %}
+{% else %}
+  {% set bodyClass = craft.request.firstSegment %}
+{% endif %}
 
-  <header>
-  	{# Banner #}
-    {% include 'partials/_banner' %}
+<body class="{{ bodyClass }}">
+  <a href="#main" class="u-visually-hidden">Skip to main content</a>
 
-  	{# Site Navigation Navbar #}
-    {% include 'partials/_navbar' %}
+  <header class="c-header">
+    <div class="u-container">
+    	{# Logo and Site Navigation #}
+      {% include 'partials/_navbar' %}
+    </div>
   </header>
-  
+
   <main id="main" role="main">
-    {% block content %}
-      <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-      <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-    {% endblock %}
+    <div class="u-container">
+      {% block content %}
+      {% endblock %}
+    </div>
   </main>
 
 	{# Footer #}
   {% include 'partials/_footer' %}
+  <a href="#0" class="to-top" title="Back To Top">Top</a>;
+
+  {% includeJsFile "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" %}
+  {% includeJsFile "assets/js/to-top.js" %}
 
 </body>
 </html>

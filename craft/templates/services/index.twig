@@ -9,7 +9,8 @@
 {% block content %}
   <h1>Services</h1>
 
-  <nav class="toc">
+  <nav class="c-toc">
+    <p>Jump to:</p>
     <ul>
       {% for entry in craft.entries.section('services').find() %}
         <li><a href="#{{ entry.title|replace(' ', '-')|lower }}">{{ entry.title }}</a></li>
@@ -18,7 +19,7 @@
   </nav>
 
   {% for entry in craft.entries.section('services').find() %}
-    <section>
+    <section class="c-card">
       <h2 id="{{ entry.title|replace(' ', '-')|lower }}">{{ entry.title }}</h2>
       {{ entry.serviceDescription }}
       <h3>What you get:</h3>

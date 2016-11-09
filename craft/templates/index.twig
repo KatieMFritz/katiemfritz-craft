@@ -20,13 +20,18 @@
 {% extends "_layout" %}
 
 {% block content %}
+  </div>{# /.u-container #}
+  <div class="banner parent">
+    <div class="u-container">
+      {{ entry.body }}
+    </div>
+  </div>
 
-  {% include 'partials/_matrix' %}
-
-	<h2>Services</h2>
-	<ul>
-		{% for entry in craft.entries.section('services').limit(10).find() %}
-			<li><a href="{{ siteUrl }}services#{{ entry.title|replace(' ', '-')|lower }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>
-{% endblock %}
+  <div class="u-container">
+    <h2>Services</h2>
+    <ul>
+      {% for entry in craft.entries.section('services').limit(10).find() %}
+        <li><a href="{{ siteUrl }}services#{{ entry.title|replace(' ', '-')|lower }}">{{ entry.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endblock %}

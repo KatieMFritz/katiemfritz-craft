@@ -1,0 +1,135 @@
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-container {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+
+/*Typography*/
+
+html {
+  font-size: 100%;
+  color: #404040;
+}
+
+a {
+  color: #1997a9;
+}
+
+a:hover {
+  color: #157e8e;
+}
+
+p {
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/****
+Vertical flow and grid
+*****/
+main * + * {
+  margin-top: 1.5rem;
+}
+
+main {
+  padding-bottom: 3rem;
+}
+
+li, dt, dd, br, th, td {
+  margin-top: 0;
+}
+
+* + h2 {
+  margin-top: 3rem;
+}
+
+* + h3 {
+  margin-top: 1.5rem;
+}
+
+main li {
+  margin-bottom: .5rem;
+}
+
+/*****************
+NAVIGATION
+******************/
+.c-nav {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.c-nav li {
+  margin-right: 1rem;
+  display: inline;
+}
+
+.c-nav a {
+  text-decoration: none;
+  padding: .75em;
+  display: inline-block;
+}
+
+/******************************
+HEADER
+*******************************/
+.c-header {
+  background-color: #eee;
+  padding-bottom: 3vw;
+}
+
+.c-header img {
+  max-height: 4rem;
+}
+
+.c-nav--header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-nav--header .active {
+  border-bottom: 3px solid #1997a9;
+}
+
+/****************************
+Special Components
+*****************************/
+.c-toc {
+  background-color: #eee;
+  padding: 1.5em;
+}
+
+.c-card {
+  border-bottom: 2px dashed #1997a9;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+/***************************
+FOOTER
+****************************/
+.c-footer {
+  background-color: #eee;
+  padding: 2vw 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

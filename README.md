@@ -9,6 +9,7 @@
 ## Config
 
 .   Set timezone in General Settings > Timezone.
+-   (Optional) Update user profile by clicking on empty image field in sidebar.
 .   Install Field Manager and Sprout Fields plugins right away.
 .   Configure [asset sources](https://craftcms.com/docs/assets). I create an `uploads` folder in the root and add subfolders and Asset Sources for major asset types depending on the site.
 .   Import site-wide settings fields from `site-wide-settings.json`.

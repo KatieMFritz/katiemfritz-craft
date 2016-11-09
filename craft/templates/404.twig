@@ -20,7 +20,13 @@
 {% set title = "404" %}
 
 {% block content %}
-	<h1>Page not found</h1>
 
-	<p>What’s worse, a hilarious 404 page can’t be found either.</p>
+  <h1>Sorry, couldn't find the page you requested.</h1>
+
+  <p>Broken link? <a href="mailto:{{ siteInfo.contactEmailAddress }}">Send me an email.</a></p>
+
+  <p>Here's a cat picture!</p>
+
+  <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
+
 {% endblock %}
