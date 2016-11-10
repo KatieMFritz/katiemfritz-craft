@@ -30,3 +30,6 @@ Rename `.html` files to `.twig` for better linting.
 ## Version Control & Deployment (notes to self)
 
 Local machine - `dev` branch. Production is `prod`.
+
+To back up WIP changes: `git push origin dev`.
+To push to production: `git push origin dev:prod`.
