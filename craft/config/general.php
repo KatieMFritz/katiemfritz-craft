@@ -8,5 +8,25 @@
  */
 
 return array(
-  'devMode' => true,
+  '*' => array(
+    'omitScriptNameInUrls' => true,
+    'generateTransformsBeforePageLoad' => true,
+    'loginPath' => 'admin',
+  ),
+  'localhost' => array(
+    'server' => 'localhost',
+    'devMode' => true,
+    'environmentVariables' => array(
+      'basePath' => 'C:\wamp\www\katiemfritz',
+      'baseUrl'  => 'localhost/katiemfritz/',
+    )
+  ),
+  'katiemfritz.com' => array(
+    'server' => '69.195.124.168',
+    'devMode' => false,
+    'environmentVariables' => array(
+      'basePath' => '',
+      'baseUrl'  => 'http://katiemfritz.com',
+    ),
+  ),
 );
