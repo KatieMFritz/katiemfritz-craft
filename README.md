@@ -26,3 +26,7 @@
 ## Theme Development
 
 Rename `.html` files to `.twig` for better linting.
+
+## Version Control & Deployment (notes to self)
+
+Local machine - `dev` branch. Production is `prod`.
