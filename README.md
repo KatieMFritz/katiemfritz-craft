@@ -29,7 +29,9 @@ Rename `.html` files to `.twig` for better linting.
 
 ## Version Control & Deployment (notes to self)
 
-Local machine - `dev` branch. Production is `prod`.
+Github's remote is `origin` and default branch is `dev`.
+
+Live site's remote is `live` and the branch is `katie`.
 
 To back up WIP changes: `git push origin dev`.
-To push to production: `git push origin dev:prod`.
+To push to live site: `git push live dev:katie`.
