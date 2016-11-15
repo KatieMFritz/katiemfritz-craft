@@ -1,5 +1,7 @@
 # Craft Base
-craft/app
+craft/app/
+craft/plugins/
+craft/storage/
 
 # Config
 dandelion.yml
