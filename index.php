@@ -13,7 +13,9 @@ if (!is_file($path))
 		http_response_code(503);
 	}
 
-	exit('Could not find your craft/ folder. Please ensure that <strong><code>$craftPath</code></strong> is set correctly in '.__FILE__);
+	exit('Currently undergoing maintenance. We\'ll be back soon!');
 }
+// 	exit('Could not find your craft/ folder. Please ensure that <strong><code>$craftPath</code></strong> is set correctly in '.__FILE__);
+// }
 
 require_once $path;
