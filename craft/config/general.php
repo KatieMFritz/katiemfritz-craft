@@ -25,7 +25,7 @@ return array(
     'server' => '69.195.124.168',
     'devMode' => false,
     'environmentVariables' => array(
-      'basePath' => '',
+      'basePath' => '/katiemfritzcraft',
       'baseUrl'  => 'http://katiemfritz.com',
     ),
   ),
