@@ -29,4 +29,12 @@ return array(
       'baseUrl'  => 'http://katiemfritz.com',
     ),
   ),
+  '45.55.187.175' => array(
+    'server' => '45.55.187.175',
+    'devMode' => false,
+    'environmentVariables' => array(
+      'basePath' => '',
+      'baseUrl'  => '45.55.187.175',
+    ),
+  ),
 );

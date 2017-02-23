@@ -1,0 +1,19 @@
+{# set twitter #}
+<meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content ="@{{ siteInfo.twitterHandle }}">
+  <meta name="twitter:title" content="
+    {% if entry.title is defined %}{{ entry.title }}
+    {% elseif title is defined %}{{ title }}
+    {% else %}{{ siteName }}{% endif %}
+    | {{ siteInfo.siteNickname }}">
+  <meta name="twitter:description" content="
+    {% if entry.summary is not empty %}{{ entry.summary }}
+    {% else %}{{ siteInfo.summary }}
+    {% endif %}">
+  <meta name="twitter:image" content="
+    {% set image = siteInfo.facebookShareImage.first() %}
+    {% if image %}
+      {{ image.url }}
+      {# If you want to get a specific transform: #}
+      {#{{ image.getUrl('transformHandle') }}#}
+    {% endif %}">

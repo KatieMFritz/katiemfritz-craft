@@ -1,13 +1,22 @@
 {# set open graph #}
 <meta property="og:site_name" content="{{ siteName }}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="
-  {% if entry.title is defined %}{{ entry.title }}
-  {% elseif title is defined %}{{ title }}
-  {% else %}{{ siteName }}{% endif %} | {{ siteInfo.siteNickname }}">
-<meta property="og:url" content="
-  {% if entry.url is defined %}{{ entry.Url }}
-  {% elseif link is defined %}{{ link }}
-  {% else %}{{ siteUrl }}{% endif %}">
-<meta property="og:image" content="{{ siteUrl }}img/og-default.png">
-<meta property="og:description" content="{% if entry.summary is defined %}{{ entry.summary }}{% else %}{{ siteInfo.summary }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="
+    {% if entry.title is not empty %}{{ entry.title }}
+    {% elseif title is defined %}{{ title }}
+    {% else %}{{ siteName }}{% endif %} | {{ siteInfo.siteNickname }}">
+  <meta property="og:url" content="
+    {% if entry.url is defined %}{{ entry.Url }}
+    {% elseif link is defined %}{{ link }}
+    {% else %}{{ siteUrl }}{% endif %}">
+
+  <meta property="og:description" content="
+    {% if entry.summary is not empty %}{{ entry.summary }}
+    {% else %}{{ siteInfo.summary }}{% endif %}">
+  <meta property="og:image" content="
+    {% set image = siteInfo.facebookShareImage.first() %}
+    {% if image %}
+      {{ image.url }}
+      {# If you want to get a specific transform: #}
+      {#{{ image.getUrl('transformHandle') }}#}
+    {% endif %}">

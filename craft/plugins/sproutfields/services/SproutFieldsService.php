@@ -19,6 +19,11 @@ class SproutFieldsService extends BaseApplicationComponent
 	public $emailSelect;
 
 	/**
+	 * @var SproutFields_RegularExpressionFieldService
+	 */
+	public $regularExpression;
+
+	/**
 	 * @var SproutFields_PhoneFieldService
 	 */
 	public $phone;
@@ -27,10 +32,11 @@ class SproutFieldsService extends BaseApplicationComponent
 	{
 		parent::init();
 
-		$this->link        = Craft::app()->getComponent('sproutFields_linkField');
-		$this->email       = Craft::app()->getComponent('sproutFields_emailField');
-		$this->emailSelect = Craft::app()->getComponent('sproutFields_emailSelectField');
-		$this->phone       = Craft::app()->getComponent('sproutFields_phoneField');
+		$this->link              = Craft::app()->getComponent('sproutFields_linkField');
+		$this->email             = Craft::app()->getComponent('sproutFields_emailField');
+		$this->emailSelect       = Craft::app()->getComponent('sproutFields_emailSelectField');
+		$this->phone             = Craft::app()->getComponent('sproutFields_phoneField');
+		$this->regularExpression = Craft::app()->getComponent('sproutFields_regularExpressionField');
 	}
 
 	/**
@@ -57,13 +63,13 @@ class SproutFieldsService extends BaseApplicationComponent
 		return $context;
 	}
 
-	public function isAnyOptionsSelected($options)
+	public function isAnyOptionsSelected($options, $value = null)
 	{
 		if (!empty($options))
 		{
 			foreach ($options as $option)
 			{
-				if ($option->selected == true)
+				if ($option->selected == true || ($value != null && $value == $option->value))
 				{
 					return true;
 				}

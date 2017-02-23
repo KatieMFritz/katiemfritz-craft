@@ -21,6 +21,7 @@ class SproutFieldsPlugin extends BasePlugin
 		Craft::import('plugins.sproutfields.integrations.sproutforms.fields.SproutFieldsLinkField');
 		Craft::import('plugins.sproutfields.integrations.sproutforms.fields.SproutFieldsNotesField');
 		Craft::import('plugins.sproutfields.integrations.sproutforms.fields.SproutFieldsPhoneField');
+		Craft::import('plugins.sproutfields.integrations.sproutforms.fields.SproutFieldsRegularExpressionField');
 
 		Craft::import('plugins.sproutfields.integrations.sproutimport.fields.SproutFields_EmailSproutImportFieldImporter');
 		Craft::import('plugins.sproutfields.integrations.sproutimport.fields.SproutFields_EmailSelectSproutImportFieldImporter');
@@ -59,7 +60,7 @@ class SproutFieldsPlugin extends BasePlugin
 	 */
 	public function getVersion()
 	{
-		return '2.1.0';
+		return '2.1.1';
 	}
 
 	/**
@@ -135,7 +136,8 @@ class SproutFieldsPlugin extends BasePlugin
 			new SproutFieldsInvisibleField(),
 			new SproutFieldsLinkField(),
 			new SproutFieldsPhoneField(),
-			new SproutFieldsNotesField()
+			new SproutFieldsNotesField(),
+			new SproutFieldsRegularExpressionField()
 		);
 	}
 
@@ -144,7 +146,7 @@ class SproutFieldsPlugin extends BasePlugin
 	 *
 	 * @return array
 	 */
-	public function registerSproutImportFieldImporters()
+	public function registerSproutImportImporters()
 	{
 		return array(
 			new SproutFields_EmailSproutImportFieldImporter(),
